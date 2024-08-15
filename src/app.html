@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Weird</title>
+    <meta name="description" content="A way to be on the web!" />
+    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <style>
+      /* inline critical css */
+      :root {
+        --border-radius: 8px;
+      }
+      /* uncut sans */
+      @font-face {
+        font-family: "uncutsans";
+        src: url("/fonts/UncutSans-Bold.woff2") format("woff2");
+        font-weight: 700;
+        font-display: swap;
+      }
+
+      /* space mono */
+      @font-face {
+        font-family: "Space Mono";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/spacemono/v13/i7dPIFZifjKcF5UAWdDRYEF8RQ.woff2)
+          format("woff2");
+      }
+
+      @font-face {
+        font-family: "Space Mono";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/spacemono/v13/i7dMIFZifjKcF5UAWdDRaPpZUFWaHg.woff2)
+          format("woff2");
+      }
+
+      /* rubik mono */
+      @font-face {
+        font-family: "Rubik Mono One";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/rubikmonoone/v18/UqyJK8kPP3hjw6ANTdfRk9YSN983TKU.woff2)
+          format("woff2");
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        line-height: 1;
+        scrollbar-width: thin;
+
+        ul {
+          list-style: none;
+        }
+      }
+
+      body {
+        font-family: "Space Mono", monospace;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "uncutsans", sans-serif;
+      }
+
+      .container {
+        padding: 3.5em 8.5vw;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 3.5em 4vw;
+        }
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+
+      p {
+        font-size: 1.6rem;
+        line-height: 1.6;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+
+    %sveltekit.head%
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents">%sveltekit.body%</div>
+  </body>
+</html>
