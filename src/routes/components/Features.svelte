@@ -18,7 +18,12 @@
 
 <section class="features">
   <div class="image">
-    <img alt="Milk and honey" height="350" src="/honeymilk.svg" />
+    <img
+      alt="Milk and honey"
+      loading="lazy"
+      height="350"
+      src="/honeymilk.svg"
+    />
   </div>
   <div class="container">
     <div>

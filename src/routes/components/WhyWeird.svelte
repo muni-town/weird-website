@@ -22,7 +22,12 @@
 <section class="why-weird">
   <div class="container">
     <div class="image">
-      <img alt="hand pointing" src="/magic-hand.svg" height="300" />
+      <img
+        alt="hand pointing"
+        loading="lazy"
+        src="/magic-hand.svg"
+        height="300"
+      />
     </div>
 
     <div class="content">
