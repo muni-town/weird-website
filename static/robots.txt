@@ -1,2 +1,15 @@
-User-agent: *
-Allow: /
+User-Agent: GPTBot
+User-Agent: ClaudeBot
+User-Agent: Claude-Web
+User-Agent: Applebot-Extended
+User-Agent: Facebookbot
+User-Agent: Meta-ExternalAgent
+User-Agent: diffbot
+User-Agent: PerplexityBot
+User-Agent: Omgili
+User-Agent: Omgilibot
+User-Agent: ImagesiftBot
+User-Agent: Bytespider
+User-Agent: Amazonbot
+User-Agent: Youbot
+Disallow: /
