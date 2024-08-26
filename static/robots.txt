@@ -1,0 +1,44 @@
+User-Agent: GPTBot
+Disallow: /
+
+User-Agent: ClaudeBot
+Disallow: /
+
+User-Agent: Claude-Web
+Disallow: /
+
+User-Agent: Applebot-Extended
+Disallow: /
+
+User-Agent: Facebookbot
+Disallow: /
+
+User-Agent: Meta-ExternalAgent
+Disallow: /
+
+User-Agent: diffbot
+Disallow: /
+
+User-Agent: PerplexityBot
+Disallow: /
+
+User-Agent: Omgili
+Disallow: /
+
+User-Agent: Omgilibot
+Disallow: /
+
+User-Agent: ImagesiftBot
+Disallow: /
+
+User-Agent: Bytespider
+Disallow: /
+
+User-Agent: Amazonbot
+Disallow: /
+
+User-Agent: Youbot
+Disallow: /
+
+User-Agent: *
+Allow: /
