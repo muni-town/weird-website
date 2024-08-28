@@ -1,7 +1,9 @@
 <script>
-  const title = "Further Reading";
+  const sectionHeading = "Further Reading";
+  const sectionSubheading = "for the nerds";
 
-  const links = [
+  const ProductLinksHeading = "Product";
+  const ProductLinks = [
     {
       text: "Magic website creator",
       url: "https://blog.erlend.sh/weird-web-pages",
@@ -11,8 +13,20 @@
       url: "https://blog.erlend.sh/weird-netizens",
     },
     {
-      text: "Further reading (for the nerds)",
+      text: "Weird Happenings",
       url: "https://blog.commune.sh/weird-happenings/",
+    },
+  ];
+
+  const protocolLinksHeading = "Protocols";
+  const protocolLinks = [
+    {
+      text: "How to Federate?",
+      url: "https://zicklag.katharos.group/blog/how-to-federate/",
+    },
+    {
+      text: "A Web of Data",
+      url: "https://zicklag.katharos.group/blog/a-web-of-data/",
     },
   ];
 </script>
@@ -29,20 +43,42 @@
     </div>
 
     <div class="content">
-      <h3>{title}</h3>
-      <ul>
-        {#each links as { text, url }}
-          <li>
-            <a href={url}>
-              <span class="link-text">{text}</span>
-              <span
-                class="link-arrow
+      <h3>{sectionHeading}</h3>
+      <h4>{sectionSubheading}</h4>
+
+      <div class="link-list">
+        <h5>{ProductLinksHeading}</h5>
+        <ul>
+          {#each ProductLinks as { text, url }}
+            <li>
+              <a href={url}>
+                <span class="link-text">{text}</span>
+                <span
+                  class="link-arrow
                 ">➜</span
-              >
-            </a>
-          </li>
-        {/each}
-      </ul>
+                >
+              </a>
+            </li>
+          {/each}
+        </ul>
+      </div>
+
+      <div class="link-list">
+        <h5>{protocolLinksHeading}</h5>
+        <ul>
+          {#each protocolLinks as { text, url }}
+            <li>
+              <a href={url}>
+                <span class="link-text">{text}</span>
+                <span
+                  class="link-arrow
+                ">➜</span
+                >
+              </a>
+            </li>
+          {/each}
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -83,20 +119,27 @@
     }
   }
 
-  h3 {
-    font-family: "uncutsans";
-    font-size: 3.5em;
-    margin: 0 0 0.75em 0;
+  .link-list {
+    margin-bottom: 4em;
   }
 
-  p {
-    font-size: 2em;
-    margin: 0 0 1.5em;
+  h3 {
+    font-size: 3.5em;
+    margin-bottom: 0.25em;
+  }
+
+  h4 {
+    font-size: 1.25em;
+    margin-bottom: 3em;
+  }
+
+  h5 {
+    font-size: 1.5em;
+    margin-bottom: 1.25em;
   }
 
   ul {
     width: 350px;
-    margin-top: 4.5em;
   }
 
   li {
