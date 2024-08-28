@@ -1,15 +1,15 @@
 <script>
   const heading = "Weird";
-  const subheading = "a way to be on the web!";
+  const subheading = `a way to <span class='italicize'>be</span> (on the web)`;
 </script>
 
 <div class="stars"></div>
 <section class="hero">
   <div class="container">
     <div class="content">
-      <div>
+      <div class="hero-copy">
         <h1>{heading}</h1>
-        <p>{subheading}</p>
+        <p>{@html subheading}</p>
       </div>
       <div class="image">
         <div class="full-size">
@@ -42,24 +42,33 @@
     place-items: center;
     margin-top: 8em;
     margin-bottom: 8em;
-  }
 
-  h1 {
-    font-family: "Rubik Mono One", monospace;
-    font-weight: 400;
-    font-size: 13em;
-    color: #fff5bf;
-    text-shadow: -9px -6px #f55134;
+    & .hero-copy {
+      display: grid;
+      place-items: center;
 
-    /* prefix required for all browsers */
-    -webkit-text-stroke-width: 2.5px;
-    -webkit-text-stroke-color: black;
-  }
+      & h1 {
+        font-family: "Rubik Mono One", monospace;
+        font-weight: 400;
+        font-size: 13em;
+        color: #fff5bf;
+        text-shadow: -9px -6px #f55134;
 
-  p {
-    color: white;
-    font-weight: 700;
-    font-size: 3em;
+        /* prefix required for all browsers */
+        -webkit-text-stroke-width: 2.5px;
+        -webkit-text-stroke-color: black;
+      }
+
+      & p {
+        color: white;
+        font-weight: 700;
+        font-size: 3em;
+      }
+
+      & .italicize {
+        font-style: italic;
+      }
+    }
   }
 
   .image {
