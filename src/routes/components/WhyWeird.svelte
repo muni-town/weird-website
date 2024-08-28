@@ -1,19 +1,17 @@
 <script>
-  const title = "Why Weird?";
-  const firstParagraph = `Weird wants to be "the Google-login button of the people's web", powered by people's websites instead of totalitarian mega-platforms.`;
-  const secondParagraph = `By making (or connecting) your website with Weird you will soon be able to access and interact with the small, open and indie web just as easily as the regular web works today. Same conveniences, without the dark patterns, spying and data theft. For more on why this matters, fellow internet nerds are welcome to read on:`;
+  const title = "Further Reading";
 
   const links = [
     {
-      text: "weird web pages",
+      text: "Magic website creator",
       url: "https://blog.erlend.sh/weird-web-pages",
     },
     {
-      text: "weird netizens",
+      text: "Web Passports",
       url: "https://blog.erlend.sh/weird-netizens",
     },
     {
-      text: "weird happenings",
+      text: "Further reading (for the nerds)",
       url: "https://blog.commune.sh/weird-happenings/",
     },
   ];
@@ -32,12 +30,6 @@
 
     <div class="content">
       <h3>{title}</h3>
-      <p>
-        {firstParagraph}
-      </p>
-      <p>
-        {secondParagraph}
-      </p>
       <ul>
         {#each links as { text, url }}
           <li>
@@ -64,10 +56,10 @@
 
   .container {
     display: grid;
-    grid-template-columns: 25% 1fr;
+    grid-template-columns: 35% 1fr;
     justify-content: end;
-    padding-top: 8em;
-    gap: 8em;
+    padding-top: 12em;
+    gap: 6em;
   }
 
   .image {
@@ -94,7 +86,7 @@
   h3 {
     font-family: "uncutsans";
     font-size: 3.5em;
-    margin: 2em 0 0.75em 0;
+    margin: 0 0 0.75em 0;
   }
 
   p {
@@ -103,7 +95,7 @@
   }
 
   ul {
-    width: 275px;
+    width: 350px;
     margin-top: 4.5em;
   }
 
