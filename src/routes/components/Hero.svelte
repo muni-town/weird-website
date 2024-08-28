@@ -1,6 +1,6 @@
 <script>
   const heading = "Weird";
-  const subheading = `a way to <span class='italicize'>be</span> (on the web)`;
+  const subheading = `a way to <span class='italicize'>be</span> on the web`;
 </script>
 
 <div class="stars"></div>
