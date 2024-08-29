@@ -29,14 +29,14 @@
   </div>
 </div>
 
-<style lang="scss">
+<style>
   .container {
     display: grid;
     grid-template-columns: 1fr auto;
   }
 
   .logo {
-    & a {
+    a {
       color: #fff5bf;
       font-family: "Rubik Mono One", monospace;
       text-decoration: none;
@@ -49,12 +49,12 @@
     display: grid;
     place-items: center;
 
-    & ul {
+    ul {
       display: grid;
       grid-auto-flow: column;
       gap: 4em;
 
-      & a {
+      a {
         color: white;
         text-decoration: none;
         font-weight: 700;

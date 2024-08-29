@@ -20,7 +20,7 @@
   </div>
 </section>
 
-<style lang="scss">
+<style>
   .description {
     position: relative;
 
@@ -40,11 +40,8 @@
       left: 0;
       /* pull the left cloud up */
       top: -30%;
-    }
 
-    @media (max-width: 1200px) {
-      &:before {
-        /* reset the left cloud */
+      @media (max-width: 1200px) {
         top: 0;
       }
     }
