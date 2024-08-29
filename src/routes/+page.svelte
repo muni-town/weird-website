@@ -22,4 +22,8 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  :global(.italicize) {
+    font-style: italic;
+  }
 </style>

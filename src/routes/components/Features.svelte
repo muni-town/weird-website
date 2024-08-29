@@ -44,7 +44,7 @@
   </div>
 </section>
 
-<style lang="scss">
+<style>
   .features {
     padding-bottom: 2em;
     background: linear-gradient(180deg, #fff5bf, #e47689);
@@ -58,7 +58,7 @@
     margin-bottom: 2em;
     position: relative;
 
-    & img {
+    img {
       /* image size */
       width: 550px;
     }
@@ -95,16 +95,16 @@
     box-shadow: 0px 3px 0 5px black;
     position: relative;
 
-    & .icon {
+    .icon {
       font-size: 5em;
     }
 
-    & h3 {
+    h3 {
       font-size: 2.5em;
       margin: 1em 0;
     }
 
-    & p {
+    p {
       font-size: 1.75em;
     }
   }

@@ -24,7 +24,7 @@
   </div>
 </section>
 
-<style lang="scss">
+<style>
   .stars {
     background: url("/stars.avif");
     /* extend a bit more than the viewport */
@@ -43,11 +43,11 @@
     margin-top: 8em;
     margin-bottom: 8em;
 
-    & .hero-copy {
+    .hero-copy {
       display: grid;
       place-items: center;
 
-      & h1 {
+      h1 {
         font-family: "Rubik Mono One", monospace;
         font-weight: 400;
         font-size: 13em;
@@ -57,67 +57,69 @@
         /* prefix required for all browsers */
         -webkit-text-stroke-width: 2.5px;
         -webkit-text-stroke-color: black;
+
+        @media (max-width: 1200px) {
+          font-size: 13em;
+        }
+
+        @media (max-width: 800px) {
+          font-size: 11em;
+        }
+
+        @media (max-width: 700px) {
+          font-size: 9em;
+        }
       }
 
-      & p {
+      p {
         color: white;
         font-weight: 700;
         font-size: 3em;
-      }
 
-      & .italicize {
-        font-style: italic;
+        @media (max-width: 1200px) {
+          font-size: 2.5em;
+        }
+
+        @media (max-width: 800px) {
+          font-size: 2em;
+        }
+
+        @media (max-width: 700px) {
+          font-size: 1.5em;
+        }
       }
     }
   }
 
   .image {
-    & img {
+    img {
       width: 1050px;
 
       @media (min-width: 1200px) {
         /* push the image up */
         margin-top: -5em;
       }
+
+      @media (max-width: 1200px) {
+        width: 750px;
+      }
     }
   }
 
   .small-size {
     display: none;
-  }
 
-  @media (max-width: 1200px) {
-    h1 {
-      font-size: 13em;
-    }
-
-    p {
-      font-size: 2.5em;
-    }
-
-    .image img {
-      width: 750px;
-    }
-  }
-
-  @media (max-width: 800px) {
-    h1 {
-      font-size: 11em;
-    }
-
-    p {
-      font-size: 2em;
-    }
-
-    .full-size {
-      display: none;
-    }
-
-    .small-size {
+    @media (max-width: 800px) {
       display: grid;
       grid-auto-flow: column;
       place-items: center;
       gap: 2em;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .full-size {
+      display: none;
     }
 
     img {
@@ -127,14 +129,6 @@
   }
 
   @media (max-width: 700px) {
-    h1 {
-      font-size: 9em;
-    }
-
-    p {
-      font-size: 1.5em;
-    }
-
     .image img {
       margin-bottom: 5em;
       width: 90%;

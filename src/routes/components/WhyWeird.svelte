@@ -83,7 +83,7 @@
   </div>
 </section>
 
-<style lang="scss">
+<style>
   .why-weird {
     background: linear-gradient(180deg, #240940 40%, #8e4569);
     color: white;
@@ -96,25 +96,23 @@
     justify-content: end;
     padding-top: 12em;
     gap: 6em;
+
+    @media (max-width: 800px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .image {
     display: grid;
     place-items: center;
 
-    & img {
+    img {
       width: 300px;
       height: auto;
       max-width: 100%;
     }
-  }
 
-  @media (max-width: 800px) {
-    .container {
-      grid-template-columns: 1fr;
-    }
-
-    .image {
+    @media (max-width: 800px) {
       display: none;
     }
   }
@@ -161,13 +159,13 @@
     grid-template-columns: 1fr 50px;
     font-size: 1.6em;
 
-    & .link-text {
+    .link-text {
       display: grid;
       place-items: center self-start;
       padding-left: 1.5em;
     }
 
-    & .link-arrow {
+    .link-arrow {
       display: grid;
       border-left: 2px solid currentColor;
       place-items: center;
