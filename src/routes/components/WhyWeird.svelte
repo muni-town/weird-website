@@ -44,10 +44,10 @@
 
     <div class="content">
       <h3>{sectionHeading}</h3>
-      <h4>{sectionSubheading}</h4>
+      <span class="section-subheading">{sectionSubheading}</span>
 
       <div class="link-list">
-        <h5>{ProductLinksHeading}</h5>
+        <span class="list-heading">{ProductLinksHeading}</span>
         <ul>
           {#each ProductLinks as { text, url }}
             <li>
@@ -64,7 +64,7 @@
       </div>
 
       <div class="link-list">
-        <h5>{protocolLinksHeading}</h5>
+        <span class="list-heading">{protocolLinksHeading}</span>
         <ul>
           {#each protocolLinks as { text, url }}
             <li>
@@ -128,14 +128,16 @@
     margin-bottom: 0.25em;
   }
 
-  h4 {
-    font-size: 1.25em;
+  .section-subheading {
+    font-size: 1.5em;
     margin-bottom: 3em;
+    display: block;
   }
 
-  h5 {
+  .list-heading {
     font-size: 1.5em;
     margin-bottom: 1.25em;
+    display: block;
   }
 
   ul {
