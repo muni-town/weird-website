@@ -1,4 +1,3 @@
-<!-- lib/Markdown.svelte -->
 <script>
   import { marked } from "marked";
 
