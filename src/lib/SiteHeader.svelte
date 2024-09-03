@@ -30,6 +30,10 @@
 </div>
 
 <style>
+  .header {
+    padding: 0.75em;
+  }
+
   .container {
     display: grid;
     grid-template-columns: 1fr auto;
