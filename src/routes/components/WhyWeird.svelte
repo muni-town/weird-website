@@ -92,14 +92,15 @@
     background: linear-gradient(180deg, #240940 40%, #8e4569);
     color: white;
     padding-bottom: 8em;
+    display: grid;
   }
 
   .container {
-    display: grid;
-    grid-template-columns: 35% 1fr;
-    justify-content: end;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
     padding-top: 12em;
-    gap: 6em;
+    gap: 7em;
+    margin: 0 auto;
 
     @media (max-width: 800px) {
       grid-template-columns: 1fr;
