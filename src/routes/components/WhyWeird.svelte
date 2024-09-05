@@ -18,7 +18,7 @@
     },
   ];
 
-  const protocolLinksHeading = "Protocols";
+  const protocolLinksHeading = "Protocol";
   const protocolLinks = [
     {
       text: "How to Federate?",
