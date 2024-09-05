@@ -1,19 +1,9 @@
 <script>
+  import WebPasspostsCard from "./feature-cards/web-passports.svelte";
+  import MagicWebsiteCreatorCard from "./feature-cards/magic-website-creator.svelte";
+
   const preludeText = "just like milk and honey...";
   const heading = "Weird is a combination of two things that go together";
-
-  const cards = [
-    {
-      icon: "➢",
-      title: "Magic website creation",
-      body: "The simplest possible way to create your own personal space on the web.",
-    },
-    {
-      icon: "➣",
-      title: "Self-sovereign internet passport",
-      body: "Independent 'social sign-in' for the alt-web.",
-    },
-  ];
 </script>
 
 <section class="features">
@@ -31,15 +21,8 @@
       <h2>{heading}</h2>
     </div>
     <div class="cards">
-      {#each cards as { icon, title, body }}
-        <div class="card">
-          <div>
-            <span class="icon">{icon}</span>
-            <h3>{title}</h3>
-            <p>{body}</p>
-          </div>
-        </div>
-      {/each}
+      <MagicWebsiteCreatorCard />
+      <WebPasspostsCard />
     </div>
   </div>
 </section>
@@ -85,27 +68,6 @@
 
     @media (max-width: 900px) {
       grid-template-columns: 1fr;
-    }
-  }
-
-  .card {
-    background: #9bafe1;
-    padding: 3em 4em;
-    border-radius: var(--border-radius);
-    box-shadow: 0px 3px 0 5px black;
-    position: relative;
-
-    .icon {
-      font-size: 5em;
-    }
-
-    h3 {
-      font-size: 2.5em;
-      margin: 1em 0;
-    }
-
-    p {
-      font-size: 1.75em;
     }
   }
 </style>
