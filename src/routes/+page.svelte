@@ -4,7 +4,7 @@
   import Description from "./components/Description.svelte";
   import Features from "./components/Features.svelte";
   import Marquee from "./components/Marquee.svelte";
-  import WhyWeird from "./components/WhyWeird.svelte";
+  import FurtherReading from "./components/FurtherReading.svelte";
   import SiteFooter from "$lib/SiteFooter.svelte";
 </script>
 
@@ -13,7 +13,7 @@
 <Description />
 <Features />
 <Marquee />
-<WhyWeird />
+<FurtherReading />
 <SiteFooter />
 
 <style>
