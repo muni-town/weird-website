@@ -21,6 +21,10 @@
   const protocolLinksHeading = "Protocol";
   const protocolLinks = [
     {
+      text: "The Leaf Protocol",
+      url: "https://zicklag.katharos.group/blog/introducing-leaf-protocol/",
+    },
+    {
       text: "How to Federate?",
       url: "https://zicklag.katharos.group/blog/how-to-federate/",
     },
