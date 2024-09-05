@@ -35,7 +35,7 @@
   ];
 </script>
 
-<section class="why-weird">
+<section class="further-reading">
   <div class="container">
     <div class="image">
       <img
@@ -88,7 +88,7 @@
 </section>
 
 <style>
-  .why-weird {
+  .further-reading {
     background: linear-gradient(180deg, #240940 40%, #8e4569);
     color: white;
     padding-bottom: 8em;
