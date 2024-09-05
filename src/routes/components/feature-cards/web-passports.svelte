@@ -6,7 +6,7 @@
 
 <Card>
   <span slot="icon">➣</span>
-  <span slot="title">Web Passposts</span>
+  <span slot="title">Web Passports</span>
 
   <Markdown {rawMarkdown} slot="body" />
 </Card>
