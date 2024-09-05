@@ -13,7 +13,6 @@
     background: linear-gradient(180deg, #250941 25%, #de7287);
     min-height: 100vh;
   }
-
   .stars {
     background: url("/stars.avif");
     height: 40vh;
