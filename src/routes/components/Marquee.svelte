@@ -17,6 +17,8 @@
     display: grid;
     place-items: center;
     font-weight: 700;
+    position: relative;
+    overflow: hidden;
 
     .content {
       color: #240940;
