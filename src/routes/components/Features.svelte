@@ -1,6 +1,6 @@
 <script>
-  import WebPasspostsCard from "./feature-cards/web-passports.svelte";
-  import MagicWebsiteCreatorCard from "./feature-cards/magic-website-creator.svelte";
+  import WebPasspostsCard from "./features/web-passports.svelte";
+  import MagicWebsiteCreatorCard from "./features/magic-website-creator.svelte";
 
   const preludeText = "just like milk and honey...";
   const heading = "Weird is a combination of two things that go together";
