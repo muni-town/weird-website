@@ -8,6 +8,12 @@ headings, links and so on even though they're supported. A link that's hard to c
 
 Say hello, again, to the weird web.
 
-Say hello, again, to the weird web.
+You are using village-scale software 🏘️ 
 
-Say hello, again, to the weird web.
+Like itch.io, but for any Open Web project 
+
+Like distributed Wikipedia for projects.
+
+Like internet archive for - you guessed it - projects.
+
+A social network for living ideas; en ecosystem for thoughts
