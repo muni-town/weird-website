@@ -6,14 +6,16 @@ For now we just want to use paragraphs here and avoid stuff like
 headings, links and so on even though they're supported. A link that's hard to click (because it moves) is bad UX
 -->
 
-Say hello, again, to the weird web.
+Say hello, again, to the weird web
 
-You are using village-scale software 🏘️ 
+Village-scale software 🏘️ 
 
 Like itch.io, but for any Open Web project 
 
-Like distributed Wikipedia for projects.
+Like a distributed Wikipedia for projects
 
-Like internet archive for - you guessed it - projects.
+Like the internet archive for - you guessed it - projects 💫
 
-A social network for living ideas; en ecosystem for thoughts
+A social network for your thoughts
+
+An ecosystem for living ideas 🌱
