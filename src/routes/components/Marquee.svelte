@@ -11,6 +11,8 @@
 
 <style>
   .marquee {
+    --animation-speed: 30s;
+
     white-space: nowrap;
     min-height: 5em;
     background: #fff5bf;
@@ -24,7 +26,7 @@
       color: #240940;
       position: absolute;
 
-      animation: marquee 25s linear infinite;
+      animation: marquee var(--animation-speed) linear infinite;
 
       /* cooked markdown styles so we need :global */
       :global(p) {
@@ -38,10 +40,10 @@
   @keyframes marquee {
     /* extend a bit more than the viewport to make it smooth */
     0% {
-      left: 110%;
+      transform: translateX(75%);
     }
     100% {
-      left: -110%;
+      transform: translateX(-75%);
     }
   }
 </style>
