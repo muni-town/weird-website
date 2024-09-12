@@ -5,7 +5,6 @@
 
   const menuLinks = [
     { text: "Members", url: "https://weird.one/members" },
-    { text: "Profile", url: "https://weird.one/auth/v1/account" },
     { text: "Register", url: "https://weird.one/auth/v1/users/register" },
   ];
 </script>
