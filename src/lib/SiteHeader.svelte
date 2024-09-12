@@ -1,4 +1,6 @@
 <script>
+  import GithubBadge from "./GithubBadge.svelte";
+
   const siteName = "Weird";
 
   const menuLinks = [
@@ -24,6 +26,10 @@
             </a>
           </li>
         {/each}
+
+        <li>
+          <GithubBadge />
+        </li>
       </ul>
     </div>
   </div>
