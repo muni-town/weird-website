@@ -4,8 +4,7 @@
   const siteName = "Weird";
 
   const menuLinks = [
-    { text: "Members", url: "https://weird.one/members" },
-    { text: "Register", url: "https://weird.one/auth/v1/users/register" },
+    { text: "App", url: "https://a.weird.one" },
   ];
 </script>
 
