@@ -56,7 +56,16 @@
     ul {
       display: grid;
       grid-auto-flow: column;
-      gap: 4em;
+      gap: 2em;
+
+      li {
+        cursor: pointer;
+        border-radius: var(--border-radius);
+        padding: 0.5em;
+        &:hover {
+          background: rgba(255, 255, 255, 0.5);
+        }
+      }
 
       a {
         color: white;
