@@ -3,9 +3,9 @@
 
   const siteName = "Weird";
 
-  const menuLinks = [
-    { text: "App", url: "https://a.weird.one" },
-  ];
+  const githubRepository = "muni-town/weird";
+
+  const menuLinks = [{ text: "App", url: "https://a.weird.one" }];
 </script>
 
 <div class="header">
@@ -26,7 +26,7 @@
         {/each}
 
         <li>
-          <GithubBadge />
+          <GithubBadge repository={githubRepository} />
         </li>
       </ul>
     </div>
