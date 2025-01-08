@@ -5,16 +5,20 @@
   const productLinksHeading = "Product";
   const productLinks = [
     {
-      text: "Magic website creator",
+      text: "Weird Web Pages",
       url: "https://blog.erlend.sh/weird-web-pages",
     },
     {
-      text: "Web Passports",
+      text: "Weird Netizens (Web Passports)",
       url: "https://blog.erlend.sh/weird-netizens",
     },
     {
-      text: "Weird Happenings",
-      url: "https://blog.commune.sh/weird-happenings/",
+      text: "Digital Homeownership",
+      url: "https://blog.muni.town/digital-homeownership/",
+    },
+    {
+      text: "Weird 2025 (Roadmap)",
+      url: "https://blog.muni.town/weird-2025/",
     },
   ];
 
@@ -31,6 +35,14 @@
     {
       text: "A Web of Data",
       url: "https://zicklag.katharos.group/blog/a-web-of-data/",
+    },
+    {
+      text: "Leaf, ATProto and ActivityPub",
+      url: "https://blog.muni.town/leaf-atproto-activitypub/",
+    },
+    {
+      text: "Capabilities & Identity with Leaf",
+      url: "https://blog.muni.town/capabilities-and-identity-with-leaf/",
     },
   ];
 </script>
