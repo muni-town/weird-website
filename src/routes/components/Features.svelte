@@ -10,7 +10,7 @@
 
 <section class="features">
   <div class="container">
-    <h2>Your starter-pack for [property-ownership on the internet](https://den.dev/blog/be-a-property-owner-not-a-renter-on-the-internet/)</h2>
+    <h2>Your starter-pack for <a href="https://den.dev/blog/be-a-property-owner-not-a-renter-on-the-internet/">property-ownership on the internet</a></h2>
     <div class="cards">
       <AvailableToday />
       <ComingSoon />
