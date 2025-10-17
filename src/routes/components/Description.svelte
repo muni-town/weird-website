@@ -53,7 +53,12 @@
   }
 
   .screenshot {
-    max-width: 80%;
+    @media (width > 900px) {
+      max-width: 80%;
+    }
+    position: relative;
+    z-index: 2;
+    margin-top: -18em;
     box-shadow: 0px 3px 0 5px black;
     border-radius: 5px;
   }
