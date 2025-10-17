@@ -1,26 +1,18 @@
-<script>
-  import p1 from "./profiles/profile-1.webp";
-  import p2 from "./profiles/profile-2.webp";
-  import p3 from "./profiles/profile-3.webp";
-  import p4 from "./profiles/profile-4.webp";
-  let { profiles = [p1, p2, p3, p4] } = $props();
-</script>
-
 <section>
   <div class="first container">
     <h2>cultivate knowledge</h2>
   </div>
   <div class="second container">
-    <div class="cards">
-      {#each profiles as src}
-        <div class="card">
-          <img {src} alt="" />
-        </div>
-      {/each}
-    </div>
+    <img
+      src="screenshot1.webp"
+      alt="Screenshot of Roomy app."
+      class="screenshot"
+    />
     <div class="new-thing">
       <p>
-        Roomy is a freeform communications playground for messages both big and small, fast and slow; in these roomy spaces we move together at the speed of understanding.
+        Roomy is a freeform communications playground for messages both big and
+        small, fast and slow; in these roomy spaces we move together at the
+        speed of understanding.
       </p>
       <div class="border"></div>
     </div>
@@ -60,6 +52,12 @@
     );
   }
 
+  .screenshot {
+    max-width: 80%;
+    box-shadow: 0px 3px 0 5px black;
+    border-radius: 5px;
+  }
+
   .new-thing {
     --main-width: 64rem;
     max-width: var(--main-width);
@@ -93,9 +91,9 @@
       max-width: 300px;
       aspect-ratio: 5/7;
       box-shadow:
-        0px 10px 16px -3px oklch(0.6 0.01 45 / .1),
-        0px 0px 30px 0px   oklch(0.6 0.01 45 / .1),
-        0px 8px 7px 0px    oklch(0.6 0.01 45 / .1);
+        0px 10px 16px -3px oklch(0.6 0.01 45 / 0.1),
+        0px 0px 30px 0px oklch(0.6 0.01 45 / 0.1),
+        0px 8px 7px 0px oklch(0.6 0.01 45 / 0.1);
       &::before {
         content: "";
         position: absolute;
