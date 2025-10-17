@@ -3,51 +3,72 @@
   const sectionSubheading = "for the nerds";
   const sections = [
     {
-      heading: "Product",
+      heading: "Design & Philosophy",
       links: [
         {
-          text: "Weird Web Pages",
-          url: "https://blog.erlend.sh/weird-web-pages",
+          text: "A Brief History of Roomy's Architectures",
+          url: "https://blog.muni.town/brief-history-of-roomy-architectures/",
         },
         {
-          text: "Weird Netizens (Web Passports)",
-          url: "https://blog.erlend.sh/weird-netizens",
+          text: "ATProto Isn't What You Think",
+          url: "https://blog.muni.town/atproto-isnt-what-you-think/",
         },
         {
-          text: "Digital Homeownership",
-          url: "https://blog.muni.town/digital-homeownership/",
+          text: "Chatty Community Gardens",
+          url: "https://blog.muni.town/chatty-community-gardens/",
         },
         {
-          text: "Weird 2025 (Roadmap)",
-          url: "https://blog.muni.town/weird-2025/",
+          text: "Chat is minimum-viable anything",
+          url: "https://blog.muni.town/chat-is-minimum-viable-anything/",
         },
       ],
     },
     {
-      heading: "Protocol",
+      heading: "Releases",
       links: [
         {
-          text: "The Leaf Protocol",
-          url: "https://zicklag.katharos.group/blog/introducing-leaf-protocol/",
+          text: "Roomy Alpha 5",
+          url: "https://blog.muni.town/roomy-space-alpha-5/",
         },
         {
-          text: "How to Federate?",
-          url: "https://zicklag.katharos.group/blog/how-to-federate/",
+          text: "Roomy Alpha 4",
+          url: "https://blog.muni.town/roomy-space-alpha4/",
         },
         {
-          text: "A Web of Data",
-          url: "https://zicklag.katharos.group/blog/a-web-of-data/",
+          text: "Roomy Alpha 3",
+          url: "https://blog.muni.town/roomy-chat-alpha3/",
         },
         {
-          text: "Leaf, ATProto and ActivityPub",
-          url: "https://blog.muni.town/leaf-atproto-activitypub/",
-        },
-        {
-          text: "Capabilities & Identity with Leaf",
-          url: "https://blog.muni.town/capabilities-and-identity-with-leaf/",
+          text: "Roomy Alpha 2",
+          url: "https://blog.muni.town/roomy-chat-alpha-2/",
         },
       ],
     },
+    // {
+    //   heading: "Protocol",
+    //   links: [
+    //     {
+    //       text: "The Leaf Protocol",
+    //       url: "https://zicklag.katharos.group/blog/introducing-leaf-protocol/",
+    //     },
+    //     {
+    //       text: "How to Federate?",
+    //       url: "https://zicklag.katharos.group/blog/how-to-federate/",
+    //     },
+    //     {
+    //       text: "A Web of Data",
+    //       url: "https://zicklag.katharos.group/blog/a-web-of-data/",
+    //     },
+    //     {
+    //       text: "Leaf, ATProto and ActivityPub",
+    //       url: "https://blog.muni.town/leaf-atproto-activitypub/",
+    //     },
+    //     {
+    //       text: "Capabilities & Identity with Leaf",
+    //       url: "https://blog.muni.town/capabilities-and-identity-with-leaf/",
+    //     },
+    //   ],
+    // },
   ];
 </script>
 
