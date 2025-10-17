@@ -12,6 +12,6 @@
 <Description />
 <Marquee />
 <Features />
-<Marquee />
+<!-- <Marquee /> -->
 <FurtherReading />
 <SiteFooter />

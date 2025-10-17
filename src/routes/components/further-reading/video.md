@@ -1,5 +1,9 @@
-### Intro to Project Weird
+### Coming soon!
 
-'Agentic Developers' are the infrastructure-minded partners of '[Barefoot Developers](https://maggieappleton.com/home-cooked-software)'. 
+Roomy is still under construction and isn't ready for daily use. The [web app](https://roomy.space/)
+is available to try out, but it's still a work-in-progress so use at your own risk.
 
-[Agentic development](https://github.com/muni-town/agentic-fediverse) is happening when we build products based on the combined principles of local-first and peer-to-peer, maximizing for user agency by way of user-centric design.
+If you are interested in trying Roomy as an early adopter, or you just want to talk, reach out to us
+on [Discord](https://discord.gg/BkEpMzzh38) or
+[Matrix](https://matrix.to/#/%23muni-town:commune.sh)!
+

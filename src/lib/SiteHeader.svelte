@@ -1,11 +1,11 @@
 <script>
   import GithubBadge from "./GithubBadge.svelte";
 
-  const siteName = "Weird";
+  const siteName = "Roomy";
 
-  const githubRepository = "muni-town/weird";
+  const githubRepository = "muni-town/roomy";
 
-  const menuLinks = [{ text: "App", url: "https://weird.one" }];
+  const menuLinks = [{ text: "App", url: "https://roomy.space" }];
 </script>
 
 <header class="header">

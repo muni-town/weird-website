@@ -9,9 +9,9 @@
   const heading = "Weird is a combination of two things that go together";
 </script>
 
-<section class="features">
+<!-- <section class="features"> -->
   <Features />
- <div class="container">
+ <!-- <div class="container"> -->
 <!--
     <h2>Your starter-pack for <a href="https://den.dev/blog/be-a-property-owner-not-a-renter-on-the-internet/">property-ownership on the internet</a></h2>
     <div class="cards">
@@ -19,7 +19,7 @@
       <ComingSoon />
     </div>
     -->
-    <div class="milk-and-honey">
+    <!-- <div class="milk-and-honey">
       <div class="text-block">
         <span class="prelude">{preludeText}</span>
         <h2>{heading}</h2>
@@ -37,8 +37,8 @@
       <MagicWebsiteCreatorCard />
       <WebPasspostsCard />
     </div>
-  </div>
-</section>
+  </div> -->
+<!-- </section> -->
 
 <style>
   .features {

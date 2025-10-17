@@ -9,13 +9,33 @@
 </script>
 
 <div class="container">
-  <Markdown {rawMarkdown} />
-  <YouTubeEmbed {videoId} {title} />
+  <div class="construction-icon">
+    <img src="/construction-icon.svg" alt="Construction icon" />
+  </div>
+  <div class="markdown">
+    <Markdown {rawMarkdown} />
+  </div>
+  <!-- <YouTubeEmbed {videoId} {title} /> -->
 </div>
 
 <style>
   .container {
-    padding-top: 12em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+    gap: 5em;
+    margin-top: 5em;
     padding-bottom: 6em;
+  }
+
+  .construction-icon {
+    width: 20em;
+  }
+
+  .markdown {
+    flex-basis: 40em;
+    flex-grow: 1;
+    text-underline-offset: 0.5em;
   }
 </style>
