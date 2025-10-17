@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Stars from "$lib/components/Stars.svelte";
   let subhead: HTMLParagraphElement;
   import SiteHeader from "$lib/SiteHeader.svelte";
   // import Cta from "./hero/Cta.svelte";
@@ -39,7 +40,7 @@
   });
 </script>
 
-<div class="stars"><img src="/stars.svg" alt="" /></div>
+<div class="stars"><Stars /></div>
 <section class="hero">
   <div class="header"><SiteHeader /></div>
   <div class="clouds"><img src="/cloud.svg" alt="" /></div>
@@ -83,21 +84,15 @@
     }
   }
   .stars {
-    opacity: .75;
     position: absolute;
     z-index: 1;
-    width: 100%;
     pointer-events: none;
-    img {
-      object-fit: cover;
-      height: 80vh;
-      width: 100%;
-    }
     grid-column: 1/1;
     grid-row: 1/-1;
   }
   .clouds {
     position: absolute;
+    z-index: 1;
     bottom: 0px;
     left: 0;
     /* actual size of the image */

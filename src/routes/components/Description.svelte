@@ -45,6 +45,8 @@
   }
 
   .second {
+    position: relative;
+    z-index: 1;
     background: linear-gradient(
       180deg,
       var(--yellow),
