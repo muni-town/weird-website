@@ -2,6 +2,7 @@
     --yellow: #fff5bf;
     --orange: #f55134;
     --purple: #b0a7e9;
+    --blue: #9bafe1;
     --yellow: oklch(96% 0.07  98.77);
     --orange: oklch(66% 0.205 32.38);
     --purple: oklch(76% 0.094 290.22);
@@ -12,9 +13,14 @@
     --p4:  oklch(.5 0.12 352);
 }
 body {
-    background: linear-gradient(180deg, #250941 20%, #de7287 40%);
-    background-repeat: no-repeat;
-    background-size: cover;
+    --box-size: 80px;
+    background: linear-gradient(to bottom, var(--p1) 20%, var(--p2) 50%, transparent 50%),
+    repeating-conic-gradient(
+    var(--blue) 0% 25%, var(--p2) 0% 50%) 50% / var(--box-size) var(--box-size)    ;
+    background-position: top, bottom;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow-x: clip;
   }
 
 .italicize {
