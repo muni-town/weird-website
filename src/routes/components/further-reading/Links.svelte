@@ -3,29 +3,37 @@
   const sectionSubheading = "for the nerds";
   const sections = [
     {
-      heading: "Design & Philosophy",
+      heading: "Product Design",
       links: [
         {
-          text: "A Brief History of Roomy's Architectures",
-          url: "https://blog.muni.town/brief-history-of-roomy-architectures/",
+          text: "Assembling Community OS",
+          url: "https://blog.erlend.sh/assembling-community-os/",
         },
         {
-          text: "ATProto Isn't What You Think",
-          url: "https://blog.muni.town/atproto-isnt-what-you-think/",
-        },
-        {
-          text: "Chatty Community Gardens",
-          url: "https://blog.muni.town/chatty-community-gardens/",
+          text: "Communal Bonfires",
+          url: "https://blog.erlend.sh/communal-bonfires/",
         },
         {
           text: "Chat is minimum-viable anything",
           url: "https://blog.muni.town/chat-is-minimum-viable-anything/",
         },
+        {
+          text: "Chatty Community Gardens",
+          url: "https://blog.muni.town/chatty-community-gardens/",
+        },
       ],
     },
     {
-      heading: "Releases",
+      heading: "Technical Design",
       links: [
+        {
+          text: "A Brief History of Roomy's Architectures",
+          url: "htttps://blog.muni.town/brief-history-of-roomy-architectures/",
+        },
+        {
+          text: "ATProto Isn't What You Think",
+          url: "https://blog.muni.town/atproto-isnt-what-you-think/",
+        },
         {
           text: "Roomy Alpha 5",
           url: "https://blog.muni.town/roomy-space-alpha-5/",
@@ -33,14 +41,6 @@
         {
           text: "Roomy Alpha 4",
           url: "https://blog.muni.town/roomy-space-alpha4/",
-        },
-        {
-          text: "Roomy Alpha 3",
-          url: "https://blog.muni.town/roomy-chat-alpha3/",
-        },
-        {
-          text: "Roomy Alpha 2",
-          url: "https://blog.muni.town/roomy-chat-alpha-2/",
         },
       ],
     },
