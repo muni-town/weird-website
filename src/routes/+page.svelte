@@ -3,6 +3,7 @@
   import Description from "./components/Description.svelte";
   import Features from "./components/Features.svelte";
   import Marquee from "./components/Marquee.svelte";
+  import OpenSocial from "./components/OpenSocial.svelte";
   import FurtherReading from "./components/FurtherReading.svelte";
   import SiteFooter from "$lib/SiteFooter.svelte";
   import './main.css';
@@ -13,5 +14,6 @@
 <Marquee />
 <Features />
 <!-- <Marquee /> -->
+<OpenSocial />
 <FurtherReading />
 <SiteFooter />
