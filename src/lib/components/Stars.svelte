@@ -53,16 +53,18 @@
         delta: Math.random(),
       };
     }
-    const fixedHeight = 1300 * .9
+    const fixedHeight = window.innerHeight * .9
     const resizeCanvas = () => {
       if(window.innerWidth === canvas.width) return
       const rect = { width: window.innerWidth, height: fixedHeight };
+      console.log({rect, dpr})
       canvas.width = rect.width * dpr;
       canvas.height = rect.height * dpr;
       w = rect.width;
       h = rect.height;
       canvas.style.width = `${rect.width}px`;
       canvas.style.height = `${rect.height}px`;
+    ctx.scale(dpr, dpr);
     };
     resizeCanvas();
 
