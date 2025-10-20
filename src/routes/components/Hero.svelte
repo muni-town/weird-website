@@ -11,7 +11,7 @@
     <div class="hero-copy">
       <h1>Roomy</h1>
       <p class="subhead">
-        make space
+        make space. cultivate knowledge
       </p>
     </div>
     <div class="image">

@@ -1,7 +1,5 @@
 <section>
-  <div class="first container">
-    <h2>cultivate knowledge</h2>
-  </div>
+  <div class="first container"></div>
   <div class="second container">
     <img
       src="screenshot1.webp"
@@ -23,9 +21,6 @@
   :root {
     --offset: 200px;
   }
-  a {
-    color: inherit;
-  }
   section {
     text-align: center;
   }
@@ -33,18 +28,7 @@
     background: linear-gradient(180deg, var(--p2), var(--p3), var(--p4));
     padding-block-end: var(--offset);
   }
-  h2,
-  .subhead {
-    color: white;
-    max-width: 44rem;
-    margin-inline: auto;
-  }
-  h2 {
-    font-size: clamp(3em, 4vw, 4em);
-    padding-block-end: 1rem;
-  }
-
-  .second {
+.second {
     background: linear-gradient(
       180deg,
       var(--yellow),
