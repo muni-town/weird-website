@@ -1,42 +1,6 @@
 <script lang="ts">
-  let subhead: HTMLParagraphElement;
   import SiteHeader from "$lib/SiteHeader.svelte";
   // import Cta from "./hero/Cta.svelte";
-  function typeWriter(
-    element: HTMLElement,
-    text: string,
-    speed = 500,
-    fn: () => void,
-  ) {
-    let i = 0;
-    let lastTime = 0;
-
-    function animate(current: number) {
-      const delta = current - lastTime;
-      if (delta >= Math.random() * speed + i * 7 && i < text.length) {
-        lastTime = current;
-        element.textContent += text.charAt(i);
-        i++;
-      }
-      if (i < text.length) {
-        requestAnimationFrame(animate);
-      }
-      if (i === text.length) {
-        fn();
-      }
-    }
-
-    animate(0);
-  }
-  $effect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    let txt = subhead.innerText;
-    subhead.innerText = "";
-    subhead.dataset.typing = "true";
-    typeWriter(subhead, txt, undefined, () => {
-      subhead.dataset.typing = "false";
-    });
-  });
 </script>
 
 <div class="stars"><img src="/stars.svg" alt="" /></div>
@@ -46,7 +10,7 @@
   <div class="content">
     <div class="hero-copy">
       <h1>Roomy</h1>
-      <p class="subhead" data-typing="true" bind:this={subhead}>
+      <p class="subhead">
         make space
       </p>
     </div>
@@ -59,7 +23,6 @@
         <img alt="monitor" height="200" src="/Screen.svg" />
       </div>
     </div>
-    <!--Cta /-->
   </div>
 </section>
 
@@ -110,17 +73,6 @@
     padding-bottom: 8em;
     justify-items: center;
     z-index: 1;
-  }
-  @keyframes pulse {
-    50% {
-      opacity: 0;
-    }
-  }
-  @media (prefers-reduced-motion: no-preference) {
-    [data-typing="true"]::after {
-      content: "|";
-      animation: pulse 1.3s step-start infinite;
-    }
   }
   .hero-copy {
     text-align: center;
