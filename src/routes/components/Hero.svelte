@@ -1,6 +1,5 @@
 <script lang="ts">
   import SiteHeader from "$lib/SiteHeader.svelte";
-  // import Cta from "./hero/Cta.svelte";
 </script>
 
 <div class="stars"><img src="/stars.svg" alt="" /></div>
