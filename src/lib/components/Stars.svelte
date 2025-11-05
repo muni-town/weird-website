@@ -15,13 +15,18 @@
     delta: number;
   };
 
-  let noJs = $state(true);
-  let dpr: number = $state(0);
-  let animationFrameId: number = 0;
+  let noLive = $state(true);
+  // let dpr: number = $state(0);
+
+  // initial value is greater than (1000 / 120 = 8.3)
+  // to get an single run on clients with reduced motion
+  let animationFrameId: number = 9;
 
   onMount(() => {
-    dpr = window.devicePixelRatio;
-    noJs = false;
+    // gave up after several hours trying to debug
+    // high-pixel ratio mobile browsers.
+    // falls back to static svg
+    if (window.devicePixelRatio === 1) noLive = false;
 
     return () => {
       if (animationFrameId) {
@@ -37,13 +42,14 @@
   const twinkle = (canvas: HTMLCanvasElement) => {
     let ctx = canvas.getContext("2d")!;
     if (!ctx) {
+      noLive = true;
       return console.error("2D Context creation failed");
     }
-    ctx.scale(dpr, dpr);
+    // ctx.scale(dpr, dpr);
     ctx.imageSmoothingEnabled = true;
     ctx.imageSmoothingQuality = "medium";
 
-    var stars: Star[] = new Array(800);
+    var stars: Star[] = new Array(600);
     for (let i = 0; i < stars.length; i++) {
       stars[i] = {
         x: Math.random(),
@@ -53,18 +59,17 @@
         delta: Math.random(),
       };
     }
-    const fixedHeight = window.innerHeight * .9
+    const fixedHeight = window.innerHeight * 0.9;
     const resizeCanvas = () => {
-      if(window.innerWidth === canvas.width) return
+      if (window.innerWidth === canvas.width) return;
       const rect = { width: window.innerWidth, height: fixedHeight };
-      console.log({rect, dpr})
-      canvas.width = rect.width * dpr;
-      canvas.height = rect.height * dpr;
+      canvas.width = rect.width; // * dpr;
+      canvas.height = rect.height; // * dpr;
       w = rect.width;
       h = rect.height;
       canvas.style.width = `${rect.width}px`;
       canvas.style.height = `${rect.height}px`;
-    ctx.scale(dpr, dpr);
+      // ctx.scale(dpr, dpr);
     };
     resizeCanvas();
 
@@ -114,11 +119,11 @@
         last = animationFrameId;
         ctx.clearRect(0, 0, w, h);
         stars.forEach((s) => {
-          shiftDelta(s);
+          if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+            shiftDelta(s);
           draw(s);
         });
       }
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
       animationFrameId = requestAnimationFrame(animate);
     }
 
@@ -137,18 +142,20 @@
   };
 </script>
 
-<svelte:window />
-{#if noJs}
+{#if noLive}
   <img src="/stars.svg" alt="" />
 {:else}
   <canvas use:twinkle></canvas>
 {/if}
 
 <style>
-  img,
   canvas {
-    object-fit: cover;
+    min-height: 100%;
     width: 100%;
-    height: 90vh;
+  }
+  img {
+    object-fit: cover;
+    min-height: min(1000px, 80vh);
+    width: 100%;
   }
 </style>

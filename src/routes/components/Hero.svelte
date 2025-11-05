@@ -85,6 +85,9 @@
   }
   .stars {
     position: absolute;
+    left: 0;
+    right: 0;
+    opacity: .75;
     z-index: 1;
     pointer-events: none;
     grid-column: 1/1;
