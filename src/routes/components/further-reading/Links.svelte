@@ -28,7 +28,7 @@
       links: [
         {
           text: "A Brief History of Roomy's Architectures",
-          url: "htttps://blog.muni.town/brief-history-of-roomy-architectures/",
+          url: "https://blog.muni.town/brief-history-of-roomy-architectures/",
         },
         {
           text: "ATProto Isn't What You Think",
