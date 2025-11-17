@@ -3,15 +3,18 @@
   import Description from "./components/Description.svelte";
   import Features from "./components/Features.svelte";
   import Marquee from "./components/Marquee.svelte";
+  import CozySoftware from "./components/CozySoftware.svelte";
+  import OpenSocial from "./components/OpenSocial.svelte";
   import FurtherReading from "./components/FurtherReading.svelte";
   import SiteFooter from "$lib/SiteFooter.svelte";
-  import './main.css';
+  import "./main.css";
 </script>
 
-<Hero /> 
+<Hero />
 <Description />
 <Marquee />
 <Features />
-<!-- <Marquee /> -->
+<CozySoftware />
+<OpenSocial />
 <FurtherReading />
 <SiteFooter />

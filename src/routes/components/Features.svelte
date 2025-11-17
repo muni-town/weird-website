@@ -1,92 +1,104 @@
 <script>
-  import WebPasspostsCard from "./features/web-passports.svelte";
-  import Features from './features/features.svelte'
-  import MagicWebsiteCreatorCard from "./features/magic-website-creator.svelte";
-  import AvailableToday from "./features/available-today.svelte";
-  import ComingSoon from "./features/coming-soon.svelte";
-
-  const preludeText = "just like milk and honey...";
-  const heading = "Weird is a combination of two things that go together";
+  const content = [
+  {
+    title: "Gardenable group chat that grows with you",
+    text: [[
+      "Every page, every thread, every post in Roomy is fundamentally a type of document. Any single chat message, discussion thread, or stand-alone page document can be transformed into the first draft of a Documentation Page, ",
+      [
+        "Digital Message Gardening",
+        "https://blog.muni.town/chatty-community-gardens/"
+      ]
+    ]]
+  },
+  {
+    title: "Communal resiliency",
+    text: [[
+      "Build sovereign communities, designed to persist under the harshest conditions with novelties like Universally Shared Records: you will have a local copy of your community's data at all times, and so will all your community members! ",
+      [
+        "Local-first software",
+        "https://www.inkandswitch.com/essay/local-first/"
+      ],
+      " realizes ",
+      [
+        "Appropriate Technology",
+        "https://en.wikipedia.org/wiki/Appropriate_technology"
+      ]
+    ]]
+  },
+  {
+    title: "Peer powered",
+    text: [[
+      "Make communities that can, if necessary, endure purely on the shared resources of sufficiently aligned peers in a mutual-sharing network. ",
+      [
+        "Peer-2-Peer software",
+        "https://en.wikipedia.org/wiki/Peer-to-peer"
+      ]
+    ]]
+  },
+  {
+    title: "Public-first; privacy-friendly",
+    text:[ `Roomy is designed first and foremost for publicly shared, collaborative content exchange. Priority conversations are carefully supported, but private spaces are not the primary use case for the platform.`,
+      ` If you don't want your private group subjected to scrutiny, we will soon support self-hosting for full privacy.`]
+  }
+];
 </script>
 
-<!-- <section class="features"> -->
-  <Features />
- <!-- <div class="container"> -->
-<!--
-    <h2>Your starter-pack for <a href="https://den.dev/blog/be-a-property-owner-not-a-renter-on-the-internet/">property-ownership on the internet</a></h2>
-    <div class="cards">
-      <AvailableToday />
-      <ComingSoon />
-    </div>
-    -->
-    <!-- <div class="milk-and-honey">
-      <div class="text-block">
-        <span class="prelude">{preludeText}</span>
-        <h2>{heading}</h2>
-      </div>
-      <div class="image">
-        <img
-          alt="Milk and honey"
-          loading="lazy"
-          height="350"
-          src="/honeymilk.svg"
-        />
-      </div>
-    </div>
-    <div class="cards">
-      <MagicWebsiteCreatorCard />
-      <WebPasspostsCard />
-    </div>
-  </div> -->
-<!-- </section> -->
+<section>
+  <div class="container">
+    <h2>Features</h2>
+
+    <ul>
+      {#each content as { title, text }}
+        <li>
+          <h3>{title}</h3>
+            {#each text as p}
+          <p>
+            {#each p as t}
+              {#if typeof t === "string"}
+                {t}
+              {:else}
+                <a href={t[1]}>{t[0]}</a>
+              {/if}
+            {/each}
+          </p>
+            {/each}
+        </li>
+      {/each}
+    </ul>
+  </div>
+</section>
 
 <style>
-  .features {
-    padding-bottom: 2em;
-    background: linear-gradient(180deg, #fff5bf, #e47689);
+  .container {
+    background: var(--purple);
+  }
+  ul {
     display: grid;
-  }
-
-
-  .milk-and-honey {
-    height: 35em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    .image {
-      margin-top: -5em;
-      margin-bottom: 2em;
-      position: relative;
-
-      img {
-        /* image size */
-        width: 550px;
-      }
-    }
-  }
-
-  .prelude {
-    display: block;
-    margin: 1em 0;
-    font-weight: 700;
-    font-size: 2em;
-  }
-
-  h2 {
-    font-size: 4em;
-    /* don't let the text get too wide */
-    max-width: 550px;
-  }
-
-  .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3em;
-    margin-top: 4em;
-
-    @media (max-width: 900px) {
+    grid-template-columns: repeat(2, minmax(300px, max-content));
+    justify-content: center;
+    column-gap: 2rem;
+    row-gap: 4rem;
+    @media (max-width: 768px) {
       grid-template-columns: 1fr;
     }
+  }
+  p{
+    max-width: 60ch;
+    padding-block-start: .75em;
+    }
+  p+p {
+    padding-block-start: .25em;
+  }
+  a {
+    color: inherit;
+  }
+  h2 {
+    text-align: center;
+    font-size: 3em;
+    padding-block-end: 6rem;
+  }
+  h3 {
+    font-size: 1.75em;
+    
   }
 </style>

@@ -156,7 +156,7 @@
   }
 
   ul {
-    width: 350px;
+    width: min(350px, 100%);
   }
 
   li {
