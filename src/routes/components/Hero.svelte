@@ -20,9 +20,14 @@
         </div>
         <h1>Roomy</h1>
       </div>
-      <p class="subhead">
-        make space <br /> cultivate knowledge
-      </p>
+      <div class="bubbles">
+        <div class="bubble bubble-make">
+          <span>make space</span>
+        </div>
+        <div class="bubble bubble-cultivate">
+          <span>cultivate knowledge</span>
+        </div>
+      </div>
     </div>
     <!-- <div class="image">
       <div class="full-size">
@@ -43,7 +48,7 @@
     grid-template-rows: min-content 1fr;
     justify-items: center;
     max-width: 100%;
-    background: #2F2F2C;
+    background: linear-gradient(180deg, #2F2F2C 0%, #1A1A18 100%);
     & > div {
       width: 100%;
       grid-column: 1/1;
@@ -81,7 +86,7 @@
   .content {
     display: grid;
     padding-top: 2em;
-    padding-bottom: 8em;
+    padding-bottom: 18em;
     justify-items: center;
     z-index: 1;
   }
@@ -120,6 +125,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      animation: glow-pulse 4s ease-in-out infinite;
+      transition: opacity 0.3s ease, transform 0.3s ease;
 
       svg {
         width: 100%;
@@ -138,29 +145,71 @@
       padding: 0 0.5em 0 0;
     }
 
-    .subhead {
-        font-weight: 500;
-        margin: -2em 0 3em auto;
-        max-width: 10em;
-        text-align: right;
+    .bubbles {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0;
+      margin: -2em -3em 3em auto;
+      max-width: 24em;
+      position: relative;
+
+      @media (max-width: 700px) {
+          max-width: 20em;
+      }
     }
 
-    p {
-      color: white;
-      font-weight: 700;
-      font-size: 3em;
+    .bubble {
+      border-radius: 2em;
+      padding: 0.4em 1.2em;
+      font-weight: 400;
+      font-size: 1.8em;
+      position: relative;
+      width: fit-content;
+      line-height: 1.4;
+      border: 1px solid #4A4A47;
+      white-space: nowrap;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: #3A3A37;
+      }
 
       @media (max-width: 1200px) {
-        font-size: 2.5em;
+        font-size: 1.6em;
       }
 
       @media (max-width: 800px) {
-        font-size: 2em;
+        font-size: 1.4em;
       }
 
       @media (max-width: 700px) {
-        font-size: 1.5em;
+        font-size: 1.3em;
       }
+    }
+
+    section:hover .hero-logo-glow {
+      opacity: 90% !important;
+      transform: scale(1.12);
+    }
+
+    .bubble-make {
+      background: #2F2F2C;
+      color: white;
+      align-self: flex-end;
+      margin-bottom: -0.3em;
+      margin-left: 2em;
+      z-index: 2;
+      animation: float 7.5s ease-in-out infinite;
+    }
+
+    .bubble-cultivate {
+      background: #2F2F2C;
+      color: white;
+      align-self: flex-start;
+      z-index: 1;
+      animation: float 7.5s ease-in-out infinite;
+      animation-delay: -1.25s;
     }
   }
 
@@ -188,6 +237,26 @@
       .full-size {
         display: none;
       }
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% {
+      opacity: 50%;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 80%;
+      transform: scale(1.08);
     }
   }
 </style>

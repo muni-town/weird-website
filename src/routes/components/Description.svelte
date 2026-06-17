@@ -1,6 +1,5 @@
 <section>
-  <div class="first container"></div>
-  <div class="second container">
+  <div class="container">
     <img
       src="screenshot1.webp"
       alt="Screenshot of Roomy app."
@@ -18,17 +17,8 @@
 </section>
 
 <style>
-  :root {
-    --offset: 200px;
-  }
   section {
     text-align: center;
-  }
-  .first {
-    background: #2F2F2C;
-    padding-block-end: var(--offset);
-  }
-.second {
     background: linear-gradient(
       180deg,
       var(--yellow),
