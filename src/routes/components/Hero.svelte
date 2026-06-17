@@ -9,7 +9,15 @@
   <div class="content">
     <div class="hero-copy">
       <div class="hero-title">
-        <div class="hero-logo-masked" aria-hidden="true"></div>
+        <div class="hero-logo-wrap">
+          <div class="hero-logo-glow" aria-hidden="true">
+            <svg width="124" height="161" viewBox="0 0 124 161" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.89114 52.5148C5.74879 8.5145 50.7373 -0.91772 81.2964 0.0675208C131.191 1.67688 123.884 108.194 121.289 147.779C113.639 153.593 105.664 157.579 97.5777 160.238C98.5486 126.744 106.51 26.7415 65.0982 17.8761C-25.1882 2.15781 11.6956 106.588 13.7154 158.802C12.1171 158.374 10.5156 157.909 8.91458 157.404C6.13105 124.579 -2.83023 86.2244 0.89114 52.5148Z" fill="currentColor"/>
+              <path d="M86.187 90.826C89.2356 81.4371 80.4693 73.6875 73.4013 78.2469C61.1191 86.1699 81.9066 104.008 86.187 90.826Z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="hero-logo-masked" aria-hidden="true"></div>
+        </div>
         <h1>Roomy</h1>
       </div>
       <p class="subhead">
@@ -87,14 +95,36 @@
       gap: 2em;
     }
 
-    .hero-logo-masked {
+    .hero-logo-wrap {
+      position: relative;
       height: min(24vw, 14em);
-      width: auto;
       aspect-ratio: 124 / 161;
       margin-top: min(16vw, 10em);
+    }
+
+    .hero-logo-masked {
+      width: 100%;
+      height: 100%;
       background: radial-gradient(ellipse 200% 100% at 40% 50%, white 0%, var(--yellow) 100%);
       mask: url(/roomy-logo.svg) center / contain no-repeat;
       -webkit-mask: url(/roomy-logo.svg) center / contain no-repeat;
+    }
+
+    .hero-logo-glow {
+      position: absolute;
+      inset: -0%;
+      color: var(--yellow);
+      opacity: 70%;
+      filter: blur(24px);
+      z-index: -1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     h1 {
