@@ -21,8 +21,8 @@
   class="github-star-button"
   aria-label="Star on GitHub"
 >
-  <GithubIcon />
   <span class="count">{count}</span>
+  <GithubIcon />
 </a>
 
 <style>
