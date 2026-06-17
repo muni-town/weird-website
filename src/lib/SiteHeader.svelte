@@ -1,8 +1,6 @@
 <script>
   import GithubBadge from "./GithubBadge.svelte";
 
-  const siteName = "Roomy";
-
   const githubRepository = "muni-town/roomy";
 
   const menuLinks = [{ text: "App", url: "https://roomy.space" }];
@@ -10,11 +8,6 @@
 
 <header class="header">
   <div class="container">
-    <div class="logo">
-      <a href="/">
-        {siteName}
-      </a>
-    </div>
     <div class="menu">
       <ul>
         {#each menuLinks as { text, url }}
@@ -38,16 +31,15 @@
     width: 100%;
   }
   .container {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr auto;
+    display: flex;
+    justify-content: flex-end;
     padding: 2rem 4vw;
   }
 
   .logo {
     a {
       color: #fff5bf;
-      font-family: "Rubik Mono One", monospace;
+      font-family: "Hanken Grotesk", system-ui, sans-serif;
       text-decoration: none;
       font-size: 1.75em;
       letter-spacing: 1px;

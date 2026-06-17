@@ -8,12 +8,15 @@
   <div class="clouds"><img src="/cloud.svg" alt="" /></div>
   <div class="content">
     <div class="hero-copy">
-      <h1>Roomy</h1>
+      <div class="hero-title">
+        <div class="hero-logo-masked" aria-hidden="true"></div>
+        <h1>Roomy</h1>
+      </div>
       <p class="subhead">
-        make space. cultivate knowledge
+        make space <br /> cultivate knowledge
       </p>
     </div>
-    <div class="image">
+    <!-- <div class="image">
       <div class="full-size">
         <img alt="keyboard and monitor" height="450" src="/hero.svg" />
       </div>
@@ -21,7 +24,7 @@
         <img alt="keyboard" height="300" src="/keyboard.svg" />
         <img alt="monitor" height="200" src="/Screen.svg" />
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
 
@@ -32,7 +35,7 @@
     grid-template-rows: min-content 1fr;
     justify-items: center;
     max-width: 100%;
-    background: linear-gradient(180deg, var(--p1), var(--p2) 80%);
+    background: #2F2F2C;
     & > div {
       width: 100%;
       grid-column: 1/1;
@@ -45,7 +48,7 @@
     }
   }
   .stars {
-    opacity: .75;
+    opacity: 0;
     position: absolute;
     z-index: 1;
     width: 100%;
@@ -59,6 +62,7 @@
     grid-row: 1/-1;
   }
   .clouds {
+    display: none;
     position: absolute;
     bottom: 0px;
     left: 0;
@@ -76,16 +80,39 @@
   .hero-copy {
     text-align: center;
 
-    h1 {
-      font-family: "Rubik Mono One", monospace;
-      font-weight: 400;
-      font-size: min(16vw, 10em);
-      color: var(--yellow);
-      text-shadow: -8px -8px var(--orange);
+    .hero-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2em;
+    }
 
-      /* prefix required for all browsers */
-      -webkit-text-stroke-width: 2.5px;
-      -webkit-text-stroke-color: black;
+    .hero-logo-masked {
+      height: min(24vw, 14em);
+      width: auto;
+      aspect-ratio: 124 / 161;
+      margin-top: min(16vw, 10em);
+      background: radial-gradient(ellipse 200% 100% at 40% 50%, white 0%, var(--yellow) 100%);
+      mask: url(/roomy-logo.svg) center / contain no-repeat;
+      -webkit-mask: url(/roomy-logo.svg) center / contain no-repeat;
+    }
+
+    h1 {
+      font-family: "Hanken Grotesk", system-ui, sans-serif;
+      font-weight: 900;
+      font-size: min(16vw, 8em);
+      letter-spacing: -0.05em;
+      background: radial-gradient(ellipse 200% 100% at 40% 50%, white 0%, var(--yellow) 100%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      padding: 0 0.5em 0 0;
+    }
+
+    .subhead {
+        font-weight: 500;
+        margin: -2em 0 3em auto;
+        max-width: 10em;
+        text-align: right;
     }
 
     p {

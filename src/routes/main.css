@@ -3,27 +3,22 @@
     --orange: #f55134;
     --purple: #b0a7e9;
     --blue: #9bafe1;
-    --yellow: oklch(96% 0.07  98.77);
+    --dark-grey: #2f2f2c;
+    --yellow: oklch(96% 0.07 98.77);
     --orange: oklch(66% 0.205 32.38);
     --purple: oklch(76% 0.094 290.22);
-    --blue: oklch(0.1990 0.1259 271.9916);
-    --p1:  oklch(.2 0.12 306);
-    --p2:  oklch(.3 0.12 312);
-    --p3:  oklch(.4 0.12 324);
-    --p4:  oklch(.5 0.12 352);
+    --blue: oklch(0.199 0.1259 271.9916);
+    --p1: oklch(0.2 0.12 306);
+    --p2: oklch(0.3 0.12 312);
+    --p3: oklch(0.4 0.12 324);
+    --p4: oklch(0.5 0.12 352);
 }
 body {
-    --box-size: 80px;
-    background: linear-gradient(to bottom, var(--p1) 20%, var(--p2) 50%, transparent 50%),
-    repeating-conic-gradient(
-    var(--blue) 0% 25%, var(--p2) 0% 50%) 50% / var(--box-size) var(--box-size)    ;
-    background-position: top, bottom;
-    background-attachment: fixed;
+    background: var(--dark-grey);
     min-height: 100vh;
     overflow-x: clip;
-  }
+}
 
 .italicize {
     font-style: italic;
-  }
-
+}

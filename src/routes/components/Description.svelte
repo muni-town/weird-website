@@ -25,7 +25,7 @@
     text-align: center;
   }
   .first {
-    background: linear-gradient(180deg, var(--p2), var(--p3), var(--p4));
+    background: #2F2F2C;
     padding-block-end: var(--offset);
   }
 .second {
