@@ -116,6 +116,7 @@
       Community organizers can
       <a href="https://atproto.com">read more about atproto</a>.
     </p>
+    </div>
   </div>
 </section>
 
