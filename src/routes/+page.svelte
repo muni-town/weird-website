@@ -1,7 +1,6 @@
 <script>
   import Hero from "./components/Hero.svelte";
   import Description from "./components/Description.svelte";
-  import Features from "./components/Features.svelte";
   import Marquee from "./components/Marquee.svelte";
   import CozySoftware from "./components/CozySoftware.svelte";
   import OpenSocial from "./components/OpenSocial.svelte";
@@ -13,7 +12,6 @@
 <Hero />
 <Description />
 <Marquee />
-<Features />
 <CozySoftware />
 <OpenSocial />
 <FurtherReading />

@@ -1,17 +1,22 @@
 <section>
   <div class="container">
-    <img
-      src="screenshot1.webp"
-      alt="Screenshot of Roomy app."
-      class="screenshot"
-    />
+    <picture>
+      <source
+        srcset="screenshot-roomy-june-26.png"
+        media="(min-width: 769px)"
+      />
+      <img
+        src="screenshot-roomy-june-26-mobile.png"
+        alt="Screenshot of Roomy app, June 2025."
+        class="screenshot"
+      />
+    </picture>
     <div class="new-thing">
       <p>
         Roomy is a freeform communications playground for messages both big and
         small, fast and slow; in these roomy spaces we move together at the
         speed of understanding.
       </p>
-      <div class="border"></div>
     </div>
   </div>
 </section>
@@ -44,13 +49,6 @@
     padding-block-end: 2rem;
     p {
       padding-block: 2rem;
-    }
-    .border {
-      border-top: 1px solid black;
-      height: 1px;
-      max-width: calc(var(--main-width) - 10rem);
-      margin-inline: auto;
-      width: 100%;
     }
   }
 </style>
