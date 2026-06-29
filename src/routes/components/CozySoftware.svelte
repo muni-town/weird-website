@@ -38,7 +38,7 @@
     <p>So to begin with, Roomy looks like this:</p>
 
     <img
-      src="screenshot-roomy-june-26.png"
+      src="screenshot-roomy-june-29.png"
       alt="Screenshot of Roomy app, June 2025"
       class="screenshot"
     />

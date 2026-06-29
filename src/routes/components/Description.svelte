@@ -2,11 +2,11 @@
   <div class="container">
     <picture>
       <source
-        srcset="screenshot-roomy-june-26.png"
+        srcset="screenshot-roomy-june-29.png"
         media="(min-width: 769px)"
       />
       <img
-        src="screenshot-roomy-june-26-mobile.png"
+        src="screenshot-roomy-june-29-mobile.png"
         alt="Screenshot of Roomy app, June 2025."
         class="screenshot"
       />
