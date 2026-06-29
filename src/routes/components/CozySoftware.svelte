@@ -1,8 +1,8 @@
 <section>
   <h2>What is Roomy</h2>
-  <div class="narrative">
+  <div class="layout">
     <img src="/e6h.png" alt="bonfire illustration" class="bonfire" />
-
+    <div class="narrative">
     <p class="lead">
       Roomy creates rooms of sociality. Digital places for friends and
       collaborators to hang out in.
@@ -64,12 +64,6 @@
       expands incrementally to hold that complexity.
     </p>
 
-    <div class="ui-elements">
-      <span class="ui-badge">index</span>
-      <span class="ui-badge">toggle</span>
-      <span class="ui-badge">more to thread</span>
-    </div>
-
     <p>
       The two best in the biz right now are
       <a href="https://zulip.com">Zulip</a> and
@@ -95,6 +89,7 @@
       Community organizers can
       <a href="https://atproto.com">read more about atproto</a>.
     </p>
+    </div>
   </div>
 </section>
 
@@ -116,23 +111,34 @@
       -4px 4px 0 var(--orange);
   }
 
-  .narrative {
-    max-width: 90ch;
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr min(360px, 30vw);
+    gap: 4rem;
+    align-items: start;
+    max-width: 1100px;
     margin: 0 auto;
+  }
+
+  .narrative {
+    grid-column: 1;
+    grid-row: 1;
     font-size: 1.1em;
     line-height: 1.7;
     font-weight: 300;
   }
 
   .bonfire {
-    display: block;
-    width: min(50%, 800px);
+    grid-column: 2;
+    grid-row: 1;
+    position: sticky;
+    top: 2rem;
+    justify-self: center;
+    width: 100%;
     max-width: 360px;
-    margin: 0 auto 3rem;
   }
 
   .lead {
-    font-size: 1.25em;
     line-height: 1.5;
     font-weight: 500;
     color: #fbbfb2;
@@ -192,26 +198,6 @@
     padding-block-start: 1em;
   }
 
-  .ui-elements {
-    display: flex;
-    gap: 0.75rem;
-    justify-content: center;
-    padding-block: 1.5rem 2.5rem;
-    flex-wrap: wrap;
-  }
-
-  .ui-badge {
-    display: inline-block;
-    background: oklch(0.25 0.06 300);
-    color: oklch(0.85 0.06 280);
-    padding: 0.4em 1em;
-    border-radius: 6px;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 0.85em;
-    border: 1px solid oklch(0.35 0.06 290);
-    letter-spacing: 0.02em;
-  }
-
   .cta {
     padding-block-start: 1em;
     font-weight: 500;
@@ -229,11 +215,20 @@
   }
 
   @media (max-width: 768px) {
-    .narrative {
-      font-size: 1.1em;
+    .layout {
+      grid-template-columns: 1fr;
+      gap: 0;
     }
-    .lead {
-      font-size: 1.2em;
+    .bonfire {
+      grid-column: 1;
+      position: static;
+      width: min(50%, 360px);
+      margin: 0 auto 3rem;
+    }
+    .narrative {
+      grid-column: 1;
+      grid-row: 2;
+      font-size: 1.1em;
     }
     h2 {
       font-size: 2.6em;

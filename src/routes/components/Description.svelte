@@ -35,6 +35,12 @@
     @media (width > 900px) {
       max-width: 80%;
     }
+    @media (width <= 768px) {
+      width: 80%;
+      aspect-ratio: 1290 / 2096.25;
+      object-fit: cover;
+      object-position: top;
+    }
     position: relative;
     z-index: 2;
     margin-top: -18em;
