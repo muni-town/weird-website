@@ -11,28 +11,35 @@
     <!--preload font files-->
     <link
       rel="preload"
-      href="https://fonts.gstatic.com/s/rubikmonoone/v18/UqyJK8kPP3hjw6ANTdfRk9YSN983TKU.woff2"
+      href="/fonts/hanken-grotesk/HankenGrotesk-Black.woff2"
       as="font"
       type="font/woff2"
       crossorigin="anonymous"
     />
     <link
       rel="preload"
-      href="https://fonts.gstatic.com/s/spacemono/v13/i7dPIFZifjKcF5UAWdDRYEF8RQ.woff2"
+      href="/fonts/hanken-grotesk/HankenGrotesk-Bold.woff2"
       as="font"
       type="font/woff2"
       crossorigin="anonymous"
     />
     <link
       rel="preload"
-      href="https://fonts.gstatic.com/s/spacemono/v13/i7dMIFZifjKcF5UAWdDRaPpZUFWaHg.woff2"
+      href="/fonts/hanken-grotesk/HankenGrotesk-SemiBold.woff2"
       as="font"
       type="font/woff2"
       crossorigin="anonymous"
     />
     <link
       rel="preload"
-      href="/fonts/UncutSans-Bold.woff2"
+      href="/fonts/hanken-grotesk/HankenGrotesk-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/hanken-grotesk/HankenGrotesk-Regular.woff2"
       as="font"
       type="font/woff2"
       crossorigin="anonymous"
@@ -55,41 +62,49 @@
       :root {
         --border-radius: 8px;
       }
-      /* uncut sans */
+
+      /* Hanken Grotesk */
       @font-face {
-        font-family: "uncutsans";
-        src: url("/fonts/UncutSans-Bold.woff2") format("woff2");
-        font-weight: 700;
+        font-family: "Hanken Grotesk";
+        src: url("/fonts/hanken-grotesk/HankenGrotesk-Light.woff2") format("woff2");
+        font-weight: 300;
+        font-style: normal;
         font-display: swap;
       }
-
-      /* space mono */
       @font-face {
-        font-family: "Space Mono";
-        font-style: normal;
+        font-family: "Hanken Grotesk";
+        src: url("/fonts/hanken-grotesk/HankenGrotesk-Regular.woff2") format("woff2");
         font-weight: 400;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/spacemono/v13/i7dPIFZifjKcF5UAWdDRYEF8RQ.woff2)
-          format("woff2");
-      }
-
-      @font-face {
-        font-family: "Space Mono";
         font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Hanken Grotesk";
+        src: url("/fonts/hanken-grotesk/HankenGrotesk-Medium.woff2") format("woff2");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Hanken Grotesk";
+        src: url("/fonts/hanken-grotesk/HankenGrotesk-SemiBold.woff2") format("woff2");
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Hanken Grotesk";
+        src: url("/fonts/hanken-grotesk/HankenGrotesk-Black.woff2") format("woff2");
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Hanken Grotesk";
+        src: url("/fonts/hanken-grotesk/HankenGrotesk-Bold.woff2") format("woff2");
         font-weight: 700;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/spacemono/v13/i7dMIFZifjKcF5UAWdDRaPpZUFWaHg.woff2)
-          format("woff2");
-      }
-
-      /* rubik mono */
-      @font-face {
-        font-family: "Rubik Mono One";
         font-style: normal;
-        font-weight: 400;
         font-display: swap;
-        src: url(https://fonts.gstatic.com/s/rubikmonoone/v18/UqyJK8kPP3hjw6ANTdfRk9YSN983TKU.woff2)
-          format("woff2");
       }
 
       * {
@@ -105,7 +120,7 @@
       }
 
       body {
-        font-family: "Space Mono", monospace;
+        font-family: "Hanken Grotesk", system-ui, sans-serif;
       }
 
       h1,
@@ -114,7 +129,7 @@
       h4,
       h5,
       h6 {
-        font-family: "uncutsans", sans-serif;
+        font-family: "Hanken Grotesk", system-ui, sans-serif;
       }
 
       .container {

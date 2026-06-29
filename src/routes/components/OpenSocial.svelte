@@ -13,9 +13,9 @@
 	<div class="section-wrapper">
 		<div class="content-container">
 			<article class="article-content">
-				<h3 class="article-title">Bluesky-connected</h3>
+				<h3 class="article-title">Atmosphere, including Bluesky-connected</h3>
 				<p class="article-text">
-					Roomy is optionally connected with the Bluesky network of 30M people.
+					Roomy is optionally connected with the Atmosphere, including Bluesky network of 45M people.
 				</p>
 			</article>
 		</div>
