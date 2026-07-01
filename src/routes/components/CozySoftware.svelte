@@ -1,7 +1,6 @@
 <section>
-  <h2>What is Roomy</h2>
+  <h2>What is Roomy?</h2>
   <div class="layout">
-    <img src="/e6h.png" alt="bonfire illustration" class="bonfire" />
     <div class="narrative">
     <p class="lead">
       Roomy creates rooms of sociality. Digital places for friends and
@@ -9,11 +8,9 @@
     </p>
 
     <p>
-      The most common such social space in the digitized world is the group
-      chat.
+      The most common such social space in the digitized world is the
+      group chat. Group chat starts out something like this:
     </p>
-
-    <p>Group chat starts out something like this:</p>
 
     <figure class="ascii-art">
       <pre>
@@ -28,67 +25,128 @@
       <figcaption>— mIRC, circa 1995</figcaption>
     </figure>
 
+    <p>That's roughly what group chat has looked like since the 90s.</p>
+
     <p>
-      That's what "group chat" has looked like since the 90s. Roomy is a lot
-      more than that, but we do believe group chat is a
-      <em>minimum viable product</em> — the best default foundation for
-      greenfield community building and digital relations.
+      Roomy is a lot more than 'group chat', but we do believe group chat
+      is <em>minimum viable everything</em>, as it's the best default
+      foundation for greenfield community building and digital relationing.
     </p>
 
-    <p>So to begin with, Roomy looks like this:</p>
+    <p>So to begin with, Roomy looks like this familiar shape:</p>
 
     <img
-      src="screenshot-roomy-june-29.png"
-      alt="Screenshot of Roomy app, June 2025"
+      src="roomy-chat-screenshot.png"
+      alt="Screenshot of the Roomy chat app"
+      class="screenshot"
+    />
+
+    <h3>In search of structure</h3>
+
+    <p>
+      The thing about group chat as we know it is that it isn't
+      structure-seeking. The modern Discord is not meaningfully better than
+      old-school IRC at knowledge-management.
+    </p>
+
+    <p>
+      That is, plain group chat doesn't really concern itself with producing
+      knowledge artifacts, it just wants to keep the conversation flowing.
+    </p>
+
+    <p>
+      For groups and orgs engaged in knowledge work, conversation is only
+      the beginning.
+    </p>
+
+    <img
+      src="roomy-structure.png"
+      alt="Roomy showing threaded structure beyond plain group chat"
       class="screenshot"
     />
 
     <p>
-      The thing about group chat as we have it is that it isn't
-      structure-seeking. The modern Discord is meaningfully better than IRC at
-      knowledge-management, but it doesn't really concern itself with
-      producing knowledge artifacts — it just wants to keep the conversation
-      flowing.
+      When larger spaces of discourse complexify, Roomy's UI expands
+      incrementally to hold that complexity in orderly fashion.
     </p>
 
-    <p>
-      That's a great pursuit as far as it goes, but for groups and
-      organizations in the business of knowledge worth, conversation is only
-      the beginning.
-    </p>
+    <ul class="features">
+      <li>Move to thread</li>
+      <li>Toggle channel view</li>
+      <li>Space-wide index</li>
+    </ul>
 
-    <h3>Idea lifecycle</h3>
+    <img
+      src="roomy-features.png"
+      alt="Roomy UI features: move to thread, toggle channel view, space-wide index"
+      class="screenshot"
+    />
 
     <p>
-      So when larger discourse spaces increase in complexity, Roomy's UI
-      expands incrementally to hold that complexity.
-    </p>
-
-    <p>
-      The two best in the biz right now are
+      The best in the biz right now are
       <a href="https://zulip.com">Zulip</a> and
-      <a href="https://discourse.org">Discourse</a>; Zulip in particular is
+      <a href="https://discourse.org">Discourse</a>. Zulip in particular is
       very functionally similar to Roomy as far as the chat-to-threads
       paradigm goes.
     </p>
 
     <p>
       Where Roomy differs is as an <em>atmospheric web application</em>. An
-      app that is "atmospheric" is one that adheres to the AT Protocol, or
-      <em>atproto</em> for short.
+      app that is 'atmospheric' is adhering to the
+      <a href="https://atproto.com">AT protocol</a>.
     </p>
+
+    <h3>Welcome to the Atmosphere</h3>
 
     <p>
-      In short, it's a protocol that does for social media accounts what we
-      already have for our telephone numbers. Your account is your telephone
-      number. You own that number, not the telecom company. If you don't like
-      your telephone company, you can switch.
+      This protocol does for social media accounts what we already have for
+      our telephoning accounts. Your telephone account is held in your
+      telephone number. You own that number, not the telecom company. If you
+      don't like your telecom provider, you can switch.
     </p>
 
-    <p class="cta">
-      Community organizers can
-      <a href="https://atproto.com">read more about atproto</a>.
+    <img
+      src="atproto-telephone.png"
+      alt="Diagram: the AT protocol's analogy to telephone numbers"
+      class="screenshot"
+    />
+
+    <p class="label">
+      AT protocol takes the structural power dynamics of social media from
+      this:
     </p>
+
+    <img
+      src="atproto-from.png"
+      alt="Diagram: centralized social media power dynamics"
+      class="screenshot"
+    />
+
+    <p class="label">..to this:</p>
+
+    <img
+      src="atproto-to.png"
+      alt="Diagram: atmospheric, decentralized social media power dynamics"
+      class="screenshot"
+    />
+
+    <p>
+      Facilitated by group management apps like Roomy, that means your
+      community can be made up of a mosaic of different atmospheric apps,
+      whilst all sharing the same login and membership list.
+    </p>
+
+    <img
+      src="roomy-mosaic.png"
+      alt="A mosaic of different atmospheric apps sharing one login and membership"
+      class="screenshot"
+    />
+
+    <img
+      src="roomy-atmosphere.png"
+      alt="Illustration of the atmospheric web of interconnected apps"
+      class="screenshot"
+    />
     </div>
 
     <p>
@@ -139,30 +197,14 @@
   }
 
   .layout {
-    display: grid;
-    grid-template-columns: 1fr min(360px, 30vw);
-    gap: 4rem;
-    align-items: start;
-    max-width: 1100px;
+    max-width: 720px;
     margin: 0 auto;
   }
 
   .narrative {
-    grid-column: 1;
-    grid-row: 1;
     font-size: 1.1em;
     line-height: 1.7;
     font-weight: 300;
-  }
-
-  .bonfire {
-    grid-column: 2;
-    grid-row: 1;
-    position: sticky;
-    top: 2rem;
-    justify-self: center;
-    width: 100%;
-    max-width: 360px;
   }
 
   .lead {
@@ -213,6 +255,33 @@
     border: 1px solid oklch(0.3 0.04 300);
   }
 
+  .features {
+    list-style: none;
+    padding: 0 0 1.5em;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .features li {
+    background: color-mix(in oklch, oklch(1 0 0) 12%, transparent);
+    border: 1px solid color-mix(in oklch, oklch(1 0 0) 25%, transparent);
+    color: #fbbfb2;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    font-weight: 500;
+    font-size: 0.95em;
+  }
+
+  .label {
+    text-align: center;
+    font-size: 1.15em;
+    font-weight: 500;
+    color: #fff;
+    padding-block-end: 0.5em;
+  }
+
   em {
     color: #fbbfb2;
     font-style: italic;
@@ -225,38 +294,13 @@
     padding-block-start: 1em;
   }
 
-  .cta {
-    padding-block-start: 1em;
-    font-weight: 500;
-  }
-
   a {
     color: #fbbfb2;
     text-decoration: underline;
     text-underline-offset: 2px;
   }
 
-  .cta a {
-    color: var(--orange);
-    text-underline-offset: 3px;
-  }
-
   @media (max-width: 768px) {
-    .layout {
-      grid-template-columns: 1fr;
-      gap: 0;
-    }
-    .bonfire {
-      grid-column: 1;
-      position: static;
-      width: min(50%, 360px);
-      margin: 0 auto 3rem;
-    }
-    .narrative {
-      grid-column: 1;
-      grid-row: 2;
-      font-size: 1.1em;
-    }
     h2 {
       font-size: 2.6em;
       padding: 0 1rem;
