@@ -44,7 +44,6 @@
     position: relative;
     z-index: 2;
     margin-top: -18em;
-    box-shadow: 0px 3px 0 5px black;
     border-radius: 5px;
   }
 

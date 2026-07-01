@@ -1,3 +1,40 @@
+<script>
+  import { onMount } from "svelte";
+  const tabs = [
+    {
+      label: "Move to thread",
+      src: "roomy-messages-to-thread.png",
+      alt: "Roomy: moving messages into a thread",
+    },
+    {
+      label: "Toggle channel view",
+      src: "roomy-new-thread.png",
+      alt: "Roomy: toggling the channel view",
+    },
+    {
+      label: "Space-wide index",
+      src: "roomy-space-index.png",
+      alt: "Roomy: the space-wide index",
+    },
+  ];
+  let activeTab = 0;
+  let rotating = true;
+  let timer;
+
+  onMount(() => {
+    timer = setInterval(() => {
+      if (rotating) activeTab = (activeTab + 1) % tabs.length;
+    }, 4000);
+    return () => clearInterval(timer);
+  });
+
+  function selectTab(i) {
+    activeTab = i;
+    rotating = false;
+    if (timer) clearInterval(timer);
+  }
+</script>
+
 <section>
   <h2>What is Roomy?</h2>
   <div class="layout">
@@ -70,17 +107,28 @@
       incrementally to hold that complexity in orderly fashion.
     </p>
 
-    <ul class="features">
-      <li>Move to thread</li>
-      <li>Toggle channel view</li>
-      <li>Space-wide index</li>
-    </ul>
+    <div class="tabs" role="tablist">
+      {#each tabs as tab, i}
+        <button
+          type="button"
+          role="tab"
+          aria-selected={activeTab === i}
+          class:on={activeTab === i}
+          on:click={() => selectTab(i)}
+        >
+          {tab.label}
+        </button>
+      {/each}
+    </div>
 
-    <img
-      src="roomy-features.png"
-      alt="Roomy UI features: move to thread, toggle channel view, space-wide index"
-      class="screenshot"
-    />
+    {#each tabs as tab, i}
+      <img
+        src={tab.src}
+        alt={tab.alt}
+        class="screenshot"
+        class:hidden={activeTab !== i}
+      />
+    {/each}
 
     <p>
       The best in the biz right now are
@@ -136,17 +184,24 @@
       whilst all sharing the same login and membership list.
     </p>
 
-    <img
-      src="roomy-mosaic.png"
-      alt="A mosaic of different atmospheric apps sharing one login and membership"
-      class="screenshot"
-    />
+    <figure>
+      <img
+        src="roomy-atmosphere.png"
+        alt="Concept design for Roomy integrations control"
+        class="screenshot"
+      />
+      <figcaption>Concept design for Roomy integrations control</figcaption>
+    </figure>
 
-    <img
-      src="roomy-atmosphere.png"
-      alt="Illustration of the atmospheric web of interconnected apps"
-      class="screenshot"
-    />
+    <div class="cta">
+      <p class="cta-msg">
+        Want to try it out and keep updated? Come hang out in the Roomy
+        space.
+      </p>
+      <a class="cta-btn" href="https://roomy.space/did:plc:gnwy2zbm3hu4gfdawzxmpb2s">
+        Open the Roomy space →
+      </a>
+    </div>
     </div>
 
     <p>
@@ -207,6 +262,46 @@
     font-weight: 300;
   }
 
+  .cta {
+    margin: 2.5rem auto 1rem;
+    text-align: center;
+    padding: 2.2rem 1.5rem;
+    border-radius: 12px;
+    background: color-mix(in oklch, oklch(1 0 0) 8%, transparent);
+    border: 1px solid color-mix(in oklch, oklch(1 0 0) 18%, transparent);
+  }
+
+  .cta-msg {
+    font-size: 1.25em;
+    color: #fff;
+    margin: 0 0 1.5rem;
+    font-weight: 400;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    color: oklch(98% 0.01 344);
+    background: oklch(59.2% 0.249 1);
+    border: 1px solid oklch(59.2% 0.249 1);
+    border-radius: 10px;
+    padding: 0.5em 1.2em;
+    font-weight: 600;
+    font-size: 1.4em;
+    text-decoration: none;
+    backdrop-filter: blur(12px);
+    transition: transform 300ms, box-shadow 300ms;
+  }
+
+  .cta-btn:hover {
+    box-shadow: 2px 2px 0 0 oklch(42.3% 0.166 15);
+    transform: scale(1.01);
+  }
+
+  .cta-btn:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+
   .lead {
     line-height: 1.5;
     font-weight: 500;
@@ -249,22 +344,21 @@
   .screenshot {
     display: block;
     max-width: 100%;
-    margin: 2rem auto 3rem;
+    margin: 1rem auto 3rem;
     border-radius: 6px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     border: 1px solid oklch(0.3 0.04 300);
   }
 
-  .features {
-    list-style: none;
-    padding: 0 0 1.5em;
-    margin: 0;
+  .tabs {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
+    padding: 0 0 0.4em;
+    margin: 0;
   }
 
-  .features li {
+  .tabs button {
     background: color-mix(in oklch, oklch(1 0 0) 12%, transparent);
     border: 1px solid color-mix(in oklch, oklch(1 0 0) 25%, transparent);
     color: #fbbfb2;
@@ -272,6 +366,30 @@
     border-radius: 999px;
     font-weight: 500;
     font-size: 0.95em;
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  .tabs button:hover {
+    background: color-mix(in oklch, oklch(1 0 0) 18%, transparent);
+  }
+
+  .tabs button.on {
+    background: #fbbfb2;
+    color: #240940;
+    border-color: #fbbfb2;
+  }
+
+  .screenshot.hidden {
+    display: none;
+  }
+
+  figcaption {
+    text-align: center;
+    font-size: 1.1em;
+    color: color-mix(in oklch, oklch(1 0 0) 80%, transparent);
+    margin: -1.5rem auto 2rem;
+    font-style: italic;
   }
 
   .label {
