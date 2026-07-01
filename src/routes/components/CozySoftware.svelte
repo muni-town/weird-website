@@ -203,33 +203,6 @@
       </a>
     </div>
     </div>
-
-    <p>
-      The two best in the biz right now are
-      <a href="https://zulip.com">Zulip</a> and
-      <a href="https://discourse.org">Discourse</a>; Zulip in particular is
-      very functionally similar to Roomy as far as the chat-to-threads
-      paradigm goes.
-    </p>
-
-    <p>
-      Where Roomy differs is as an <em>atmospheric web application</em>. An
-      app that is "atmospheric" is one that adheres to the AT Protocol, or
-      <em>atproto</em> for short.
-    </p>
-
-    <p>
-      In short, it's a protocol that does for social media accounts what we
-      already have for our telephone numbers. Your account is your telephone
-      number. You own that number, not the telecom company. If you don't like
-      your telephone company, you can switch.
-    </p>
-
-    <p class="cta">
-      Community organizers can
-      <a href="https://atproto.com">read more about atproto</a>.
-    </p>
-    </div>
   </div>
 </section>
 
